@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO register(UserDTO userDTO) {
-
         Optional<UserEntity> optUe = userRepository.findByOwnerEmail(userDTO.getOwnerEmail());
         if(optUe.isPresent()){
             List<ErrorModel> errorModelList = new ArrayList<>();
